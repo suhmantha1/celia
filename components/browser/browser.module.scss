@@ -15,8 +15,10 @@
 }
 
 .bar {
-  position: relative;
-  width: calc(100% + 40px);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: calc(100% - 35px);
   background-color: #c7c8c9;
   z-index: 10;
   border: 2px ridge #c7c8c9;
@@ -58,7 +60,7 @@
 .link {
   width: 49px;
   height: 49px;
-  background-image: url("/images/netscape.png");
+  background-image: url("/images/netscape.jpg");
   background-size: cover;
   position: relative;
 
