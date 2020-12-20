@@ -1,0 +1,39 @@
+::-webkit-scrollbar {
+  width: 30px;
+  height: 30px;
+  background-color: #e3e4e5;
+  border: 2px ridge #c7c8c9;
+  border-left-color: #ffffff;
+  border-top-color: #ffffff;
+}
+
+::-webkit-scrollbar-thumb {
+  border: 2px ridge #303031;
+  border-top-color: #ffffff;
+  border-left-color: #ffffff;
+  background-color: #c7c8c9;
+}
+
+::-webkit-scrollbar-button:start:decrement,
+::-webkit-scrollbar-button:end:increment {
+  height: 30px;
+  width: 30px;
+  display: block;
+  background-repeat: no-repeat;
+  border: 2px outset #303031;
+  border-top-color: #ffffff;
+  border-left-color: #ffffff;
+  background-color: #c7c8c9;
+}
+
+::-webkit-scrollbar-button:vertical:decrement {
+  background-image: url("/images/triangle.png");
+  background-size: 10px;
+  background-position: center;
+}
+
+::-webkit-scrollbar-button:vertical:increment {
+  background-image: url("/images/triangle-down.png");
+  background-size: 10px;
+  background-position: center;
+}

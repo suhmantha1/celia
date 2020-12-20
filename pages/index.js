@@ -25,6 +25,7 @@ export default function Home() {
           href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap"
           rel="stylesheet"
         />
+        <link rel="stylesheet" href="scrollbars.css" type="text/css" />
         <meta name="msapplication-TileColor" content="#ff205f" />
         <meta name="theme-color" content="#ff205f" />
         <meta name="description" content={description} />
