@@ -1,0 +1,94 @@
+.wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  border: 5px ridge #c7c8c9;
+  border-left-color: #ffffff;
+  border-top-color: #ffffff;
+  background-image: url("/images/bg.jpg");
+  padding-right: 40px;
+  animation: rainbow 80s linear infinite;
+}
+
+.bar {
+  position: relative;
+  width: calc(100% + 40px);
+  background-color: #c7c8c9;
+  z-index: 10;
+  border: 2px ridge #c7c8c9;
+  border-left-color: #ffffff;
+  border-top-color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: flex-start;
+
+  &.introBar {
+    align-items: center;
+  }
+
+  .intro {
+    padding: 0 10px;
+  }
+
+  .buttonWrapper {
+    width: calc(100% - 60px);
+  }
+
+  button {
+    padding: 15px 30px;
+    border-radius: 0;
+    border-style: outset;
+    border-color: #ebeded;
+    background-color: #c7c8c9;
+    position: relative;
+
+    &:hover {
+      div {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.link {
+  width: 49px;
+  height: 49px;
+  background-image: url("/images/netscape.png");
+  background-size: cover;
+  position: relative;
+
+  &:hover {
+    div {
+      opacity: 1;
+      left: -500px;
+    }
+  }
+}
+
+.fireworks {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 500px;
+  height: 500px;
+  background-image: url("/images/fireworks.gif");
+  background-size: cover;
+  pointer-events: none;
+  z-index: 10;
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+}
+
+@keyframes rainbow {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -1000vw 0;
+  }
+}

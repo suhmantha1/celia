@@ -1,0 +1,144 @@
+.wrapper {
+  background-image: url("/images/lucy.jpg");
+  background-size: cover;
+  background-position: right;
+  width: calc(100% + 40px);
+  height: 100%;
+  position: relative;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 9;
+}
+
+.button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 200px;
+  height: 50px;
+  border: 2px ridge #c7c8c9;
+  border-left-color: #ffffff;
+  border-top-color: #ffffff;
+  background-color: #ff205f;
+  z-index: 1;
+  font-weight: bold;
+
+  &:hover {
+    + div {
+      opacity: 1;
+    }
+  }
+}
+
+.fireworks {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 500px;
+  height: 500px;
+  background-image: url("/images/fireworks.gif");
+  background-size: cover;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+  z-index: 0;
+}
+
+.eiffel {
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  z-index: 2;
+  width: 100px;
+  height: 200px;
+  animation: swing 1s ease-out infinite;
+  transform: rotate(-45deg);
+}
+
+.baguette {
+  position: absolute;
+  right: 10%;
+  bottom: 10%;
+  z-index: 2;
+  width: 200px;
+  height: 200px;
+  animation: swingOpp 1s ease-out infinite;
+  transform: rotate(45deg);
+}
+
+@keyframes swing {
+  0% {
+    transform: rotate(-45deg);
+  }
+  50% {
+    transform: rotate(45deg);
+  }
+  100% {
+    transform: rotate(-45deg);
+  }
+}
+
+@keyframes swingOpp {
+  0% {
+    transform: rotate(45deg);
+  }
+  50% {
+    transform: rotate(-45deg);
+  }
+  100% {
+    transform: rotate(45deg);
+  }
+}
+
+.active {
+  animation: enterSite 2s ease-in-out;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 9;
+}
+
+@keyframes enterSite {
+  0% {
+    opacity: 1;
+    transform: rotate(0deg);
+  }
+  10% {
+    transform: rotate(360deg);
+  }
+  20% {
+    transform: rotate(720deg);
+  }
+  30% {
+    transform: rotate(1080deg);
+  }
+  40% {
+    transform: rotate(1440deg);
+  }
+  50% {
+    opacity: 0.5;
+    transform: rotate(1800deg);
+  }
+  60% {
+    transform: rotate(2160deg);
+  }
+  70% {
+    transform: rotate(2520deg);
+  }
+  80% {
+    transform: rotate(2880deg);
+  }
+  90% {
+    transform: rotate(3240deg);
+  }
+  100% {
+    opacity: 0;
+    transform: rotate(3600deg);
+  }
+}
